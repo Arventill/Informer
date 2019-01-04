@@ -1,0 +1,9 @@
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\obj\Debug\DotNetApp.csprojAssemblyReference.cache
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\obj\Debug\DotNetApp.Resources.AppResources.resources
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\obj\Debug\DotNetApp.csproj.GenerateResource.cache
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\obj\Debug\DotNetApp.csproj.CoreCompileInputs.cache
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\bin\Debug\DotNetApp.exe.config
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\bin\Debug\DotNetApp.exe
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\bin\Debug\DotNetApp.pdb
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\obj\Debug\DotNetApp.exe
+C:\Users\Filip\Desktop\CAT\programming\C#\DotNetApp\DotNetApp\obj\Debug\DotNetApp.pdb
