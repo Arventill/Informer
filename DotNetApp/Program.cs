@@ -25,8 +25,7 @@ namespace DotNetApp
                         }
                     case "3":
                         {
-                            ExitApp();
-                            break;
+                            return;
                         }
                     default:
                         {
@@ -40,7 +39,15 @@ namespace DotNetApp
 
         private static void ExitApp()
         {
-            System.Environment.Exit(0);
+            try
+            {
+                System.Environment.Exit(0);
+            }
+            catch (Exception)
+            {
+                return;
+                throw;
+            }
         }
 
         private static void About()
