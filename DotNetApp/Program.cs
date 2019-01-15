@@ -15,7 +15,7 @@ namespace DotNetApp
                 {
                     case "1":
                         {
-                            Console.WriteLine("In progress");
+                            Console.WriteLine("In progeress");
                             break;
                         }
                     case "2":
@@ -25,16 +25,18 @@ namespace DotNetApp
                         }
                     case "3":
                         {
-                            return;
+                            ExitApp();
+                            break;
                         }
                     default:
                         {
-                            Console.WriteLine("Nie znaleziono takiej opcji!");
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine(AppResources.error_doesntExist);
+                            Console.ResetColor();
                             break;
                         }
                 }
             }
-
         }
 
         private static void ExitApp()
@@ -46,7 +48,6 @@ namespace DotNetApp
             catch (Exception)
             {
                 return;
-                throw;
             }
         }
 
