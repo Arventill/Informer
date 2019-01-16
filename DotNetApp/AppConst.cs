@@ -6,25 +6,40 @@ namespace DotNetApp
 {
     class AppConst
     {
+        public const string AuthorizationApiKey = "RGAPI-2958ec04-0412-63bf-1ddc-2aba3fe0bfbe";
         private const string Tab = "\t";
-        private const string Newline = "\n";
+        private static string w1, w2;
 
         public static void Welcome()
         {
-            Console.WriteLine("Witaj w aplikacji!\n");
-            Console.WriteLine("Wybierz jedna z dostepnych opcji:");
-            Console.WriteLine("[1] Opcja nr 1");
-            Console.WriteLine("[2] Informacje o aplikacji");
-            Console.WriteLine("[3] Wyjscie\n");
-            Console.Write("Twoj wybor: ");
+            w1 = "Witaj w aplikacji!";
+            w2 = "Wybierz jedna z dostepnych opcji:\n\n";
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.SetCursorPosition((Console.WindowWidth / 2) - (w1.Length / 2), Console.CursorTop);
+            Console.WriteLine(w1);
+            Console.SetCursorPosition(Console.WindowWidth / 2 - w2.Length / 2, Console.CursorTop);
+            Console.WriteLine(w2);
+            foreach (var item in AppConst.WelcomeWords)
+            {
+                Console.ForegroundColor = item.Value;
+                Console.WriteLine(item.Key);
+            }
+            Console.Write(Tab + "Twój wybór: ");
+            Console.ResetColor();
         }
+
+        public static readonly Dictionary<string, ConsoleColor> WelcomeWords = new Dictionary<string, ConsoleColor>
+        {
+            {$"{Tab}[1] Opcja nr 1",ConsoleColor.Yellow },
+            {$"{Tab}[2] Informacje o aplikacji",ConsoleColor.Yellow },
+            {$"{Tab}[3] Wyjscie\n",ConsoleColor.Yellow }
+        };
 
         public static readonly Dictionary<string, ConsoleColor> AppAboutInfo = new Dictionary<string, ConsoleColor>
         {
-            {$"{Tab}Wersja aplikacji:{Tab}{AppResources.ver}",ConsoleColor.Yellow },
-            {$"{Tab}Project Owner:{Tab}{Tab}{AppResources.owner}",ConsoleColor.Blue },
-            {$"{Tab}UX & UI:{Tab}{Tab}{AppResources.design}",ConsoleColor.Green },
-            {$"{Newline}* * * Kliknij dowolny przycisk aby kontynuować * * *{Newline}",ConsoleColor.Yellow }
+            {$"Wersja aplikacji:{Tab}{AppResources.ver}",ConsoleColor.Yellow },
+            {$"Project Owner:{Tab}{Tab}{AppResources.owner}",ConsoleColor.Blue },
+            {$"UX & UI:{Tab}{Tab}{AppResources.design}",ConsoleColor.Green }
         };
     }
 }

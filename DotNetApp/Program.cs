@@ -1,5 +1,7 @@
 ﻿using DotNetApp.Resources;
 using System;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace DotNetApp
 {
@@ -9,6 +11,7 @@ namespace DotNetApp
         {
             while (true)
             {
+                MaximizeConsoleWindow();
                 AppConst.Welcome();
                 var answer = Console.ReadLine();
                 switch (answer)
@@ -31,12 +34,24 @@ namespace DotNetApp
                     default:
                         {
                             Console.ForegroundColor = ConsoleColor.Red;
+                            Console.SetCursorPosition((Console.WindowWidth / 2) - (AppResources.error_doesntExist.Length / 2), Console.CursorTop);
                             Console.WriteLine(AppResources.error_doesntExist);
                             Console.ResetColor();
                             break;
                         }
                 }
+                WaitForRestart();
             }
+        }
+
+        private static void WaitForRestart()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.SetCursorPosition((Console.WindowWidth / 2) - (AppResources.messageContinue.Length / 2), Console.CursorTop);
+            Console.WriteLine(AppResources.messageContinue);
+            Console.ResetColor();
+            Console.ReadKey();
+            Console.Clear();
         }
 
         private static void ExitApp()
@@ -55,11 +70,19 @@ namespace DotNetApp
         {
             foreach (var item in AppConst.AppAboutInfo)
             {
+                Console.SetCursorPosition((Console.WindowWidth / 2) - (item.Key.Length / 2) - 5, Console.CursorTop);
                 Console.ForegroundColor = item.Value;
                 Console.WriteLine(item.Key);
             }
             Console.ResetColor();
-            Console.ReadKey();
+        }
+
+        [DllImport("user32.dll")]
+        private static extern bool ShowWindow(IntPtr hWnd, int cmdShow);
+        private static void MaximizeConsoleWindow()
+        {
+            Process p = Process.GetCurrentProcess();
+            ShowWindow(p.MainWindowHandle, 3);
         }
     }
 }

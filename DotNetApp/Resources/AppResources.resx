@@ -121,6 +121,12 @@
     <value>Filip Nowicki</value>
     <comment>UI &amp; UX Designer</comment>
   </data>
+  <data name="error_doesntExist" xml:space="preserve">
+    <value>Wybrana opcja nie istnieje. Spróbuj ponownie</value>
+  </data>
+  <data name="messageContinue" xml:space="preserve">
+    <value>* * * Kliknij dowolny przycisk aby kontynuować * * *</value>
+  </data>
   <data name="owner" xml:space="preserve">
     <value>Filip Nowicki</value>
     <comment>Project Owner</comment>
