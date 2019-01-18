@@ -124,6 +124,9 @@
   <data name="error_doesntExist" xml:space="preserve">
     <value>Wybrana opcja nie istnieje. Spróbuj ponownie</value>
   </data>
+  <data name="error_noInternetConnection" xml:space="preserve">
+    <value>Do korzystania z aplikacji potrzebny jest dostęp do internetu! Spróbuj ponownie później.</value>
+  </data>
   <data name="messageContinue" xml:space="preserve">
     <value>* * * Kliknij dowolny przycisk aby kontynuować * * *</value>
   </data>

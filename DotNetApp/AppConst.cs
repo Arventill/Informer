@@ -7,6 +7,7 @@ namespace DotNetApp
     class AppConst
     {
         public const string AuthorizationApiKey = "RGAPI-2958ec04-0412-63bf-1ddc-2aba3fe0bfbe";
+        public const string InternetCheckoutString = "http://clients3.google.com/generate_204";
         private const string Tab = "\t";
         private static string w1, w2;
 
